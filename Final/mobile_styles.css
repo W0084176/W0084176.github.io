@@ -1,0 +1,92 @@
+
+/* ===========
+   Base Styles
+   ===========
+*/
+a#navicon {
+	display:none;
+}
+
+
+
+/*
+=======================================================
+Desktop Styles: 769px and greater
+=========================================================
+*/
+
+@media only screen and (min-width: 769px) {
+	
+	
+}
+
+/*
+=======================================================
+Tablet Styles: 481px and greater
+=========================================================
+*/
+
+@media only screen and (min-width: 481px) {
+		ul.mainmenu > li {
+		float:left;
+		width:15%;
+		position:relative;
+		}
+		
+	nav.horizontal {background-color: rgb(39, 174, 96);}
+}
+
+
+/*
+=======================================================
+Mobile Styles: 0px to 480px
+=========================================================
+*/
+
+@media only screen and (max-width: 480px) {
+	
+	a#navicon {
+	display:block;
+	 background-color: rgb(39, 174, 96);
+   }
+   nav.horizontal ul {
+	   display:none;
+	  
+   }
+   a#navicon:hover+ul, nav.horizontal ul:hover {
+	   display:block;
+   }
+
+}
+
+/*
+=======================================================
+Table Styles: 0px to 680px
+=========================================================
+*/
+
+@media only screen and (max-width: 680px) {
+	
+		.schedule1 {
+		display:none;
+	}
+		.scheduleList {
+			display:block;
+		}
+	
+}
+
+/*
+=======================================================
+Table Styles: 681px and graeter
+=========================================================
+*/
+
+@media only screen and (min-width: 681px) {
+	
+		.scheduleList {
+			display:none;
+		}
+	}
+	
+}

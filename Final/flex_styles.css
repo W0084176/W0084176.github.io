@@ -1,0 +1,35 @@
+
+header, footer {
+	width: 100%;
+}
+
+body {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+
+
+nav.horizontal > ul {
+	display: -webkit-flex;
+	display:flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	
+}
+
+nav.horizontal li {
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+
+.samples {
+	justify-content:center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;	
+}
