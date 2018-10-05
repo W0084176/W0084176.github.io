@@ -33,3 +33,14 @@ nav.horizontal li {
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;	
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+	margin: 5px;
+    padding: 5px;
+}
