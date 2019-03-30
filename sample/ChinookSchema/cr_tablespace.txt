@@ -1,13 +1,18 @@
-#!/bin/bash
+spool cr_tablespace.lst
 
-#rm -rf /u02
-#rm -rf /u02_2
+SET ECHO ON
+CONN SYS/oracle AS SYSDBA
 
-mkdir -p /u02/app/oracle/oradata/orcl
-mkdir -p /u02_2/app/oracle/oradata/orcl
+--DROP TABLESPACE Chinook_Data01 INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
+--DROP TABLESPACE Chinook_Index01 INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
 
-chown -R oracle:oinstall /u02
-chown -R oracle:oinstall /u02_2
+CREATE TABLESPACE Chinook_Data01
+datafile '/u02/app/oracle/oradata/orcl/Chinook_Data01.dbf' size 100M,
+	 '/u02/app/oracle/oradata/orcl/Chinook_Data02.dbf' size 100M;
 
-chmod -R 775 /u02
-chmod -R 775 /u02_2
+CREATE TABLESPACE Chinook_Index01
+datafile '/u02_2/app/oracle/oradata/orcl/Chinook_Index01.dbf' size 100M;
+
+spool off
+
+
